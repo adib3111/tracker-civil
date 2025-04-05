@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syllabus Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Syllabus Completion Tracker</h1>
-        
-        <div id="subjects"></div> <!-- Subject input fields will go here -->
-        
+        <div class="progress-container">
+            <div class="progress-semicircle">
+                <div class="progress-fill" id="progress-fill"></div>
+                <div class="progress-percentage" id="progress-percentage">0%</div>
+            </div>
+        </div>
+        <h1>Syllabus Tracker</h1>
         <h2 id="progress">Total Progress: 0%</h2>
+        
+        <div class="filter-container">
+            <label for="subject-filter">Filter by Subject:</label>
+            <select id="subject-filter">
+                <option value="all">All Subjects</option>
+                <!-- Subject options will be added dynamically -->
+            </select>
+        </div>
+        
+        <div id="subjects">
+            <!-- Subjects will be loaded here via JavaScript -->
+        </div>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
